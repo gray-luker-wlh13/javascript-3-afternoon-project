@@ -28,7 +28,7 @@ let productCopy = {...product};
 
 let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-let colorsCopy = [colors];
+let colorsCopy = [...colors];
 
 
 

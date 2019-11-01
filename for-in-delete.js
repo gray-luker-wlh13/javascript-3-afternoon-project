@@ -95,7 +95,15 @@ function double(obj){
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+let secrets = (obj) => {
+  let sentence = '';
+  for(let key in obj){
+    if(key.startsWith('sh')){
+      sentence += obj[key];
+    }
+  }
+  return sentence;
+}
 
 
 
@@ -126,7 +134,14 @@ function double(obj){
   Delete the property password and return the object.
 */
 
-//Code Here
+let removePassword = (obj) => {
+  for(let key in obj){
+    if(key === 'password'){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 
@@ -145,7 +160,11 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for(let key in deleteTheBigNumbers){
+  if(deleteTheBigNumbers[key] > 100){
+    delete deleteTheBigNumbers[key];
+  }
+}
 
 
 
@@ -158,7 +177,14 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+let startsWithK = (obj) => {
+  for(let key in obj){
+    if(key.startsWith('k')){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 
@@ -173,6 +199,13 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+let hiddenTreasure = (obj) => {
+  for(let key in obj){
+    if(!obj[key].includes('treasure')){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
