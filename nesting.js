@@ -50,7 +50,16 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+let employeeUpdater = () => {
+  employees.filter((e, i) => {
+    if(e.firstName === 'Theo'){
+      employees.splice(i, 1)
+    } else if(e.firstName === 'Lorie'){
+      e.department = 'HR'
+    }
+  })
+  return employees;
+}
 
 
 
@@ -68,7 +77,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+let removeDuplicates = (arr) => {
+  for(let i = 0; i < arr.length; i++){
+    for(let j = arr.length-1; j >= 0; j--){
+      if(arr[i] === arr[j] && i !== j){
+        arr.splice(i, 1)
+      }
+    }
+  }
+  return arr;
+}
 
 
 
