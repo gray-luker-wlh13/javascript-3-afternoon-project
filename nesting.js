@@ -115,8 +115,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -156,7 +156,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+let recordCleaner = () => {
+  myCar.accidents.forEach(e => {
+    e.atFaultForAccident = false;
+  })
+}
 
 
 
@@ -175,6 +179,20 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+let looper = () => {
+  numsArr[0].forEach((e, i) => {
+    if(numsArr[0][i] % 2 === 0)numsArr[0][i] = 'even'
+    else numsArr[0][i] = 'odd';
+  });
+  numsArr[1].forEach((e, i) => {
+    if(numsArr[1][i] % 2 === 0)numsArr[1][i] = 'even'
+    else numsArr[1][i] = 'odd';
+  });
+  numsArr[2].forEach((e, i) => {
+    if(numsArr[2][i] % 2 === 0)numsArr[2][i] = 'even'
+    else numsArr[2][i] = 'odd';
+  });
+  return numsArr;
+}
 
 
